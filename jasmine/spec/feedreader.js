@@ -49,7 +49,6 @@ $(function() {
                 expect(element.name).not.toBe(0);
             });
         })
-
     });
 
     /* TODO: Write a new test suite named "The menu" */
@@ -92,8 +91,8 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-        beforeEach(function (done) {
-            loadFeed(0, function () {
+        beforeEach(function(done) {
+            loadFeed(0, function() {
                 done();
             });
         });
@@ -127,6 +126,5 @@ $(function() {
          it('new feed is not the same as the old one', function(){
             expect(firstFeed).not.toBe(secondFeed);
          });
-
     })
 }());
