@@ -34,7 +34,7 @@ $(function() {
         it('is the URL defined?', function(){
             allFeeds.forEach(element => {
                 expect(element.url).toBeDefined();
-                expect(element.url).not.toBe(0);
+                expect(element.url.length).not.toBe(0);
             });
         })
 
@@ -46,7 +46,7 @@ $(function() {
         it('is the name defined?', function(){
             allFeeds.forEach(element => {
                 expect(element.name).toBeDefined();
-                expect(element.name).not.toBe(0);
+                expect(element.name.length).not.toBe(0);
             });
         })
     });
@@ -98,7 +98,7 @@ $(function() {
         });
 
         it('check entries', function(){
-            let allEntries = $(".entry");
+            let allEntries = $(".feed .entry");
             expect(allEntries.length).toBeGreaterThan(0);
         })
     })
