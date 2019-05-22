@@ -115,16 +115,16 @@ $(function() {
         let secondFeed = null;
          beforeEach(function(done) {
             loadFeed(0,function() {
-                firstFeed = $('.feed');
+                firstFeed = $('.feed').html();
                 loadFeed(1,function() {
-                    secondFeed = $('.feed');
+                    secondFeed = $('.feed').html();
                     done();
                 });
             });
          });
 
          it('new feed is not the same as the old one', function(){
-            expect(firstFeed).not.toBe(secondFeed);
+            expect(firstFeed).not.toEqual(secondFeed);
          });
     })
 }());
